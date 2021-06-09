@@ -14,8 +14,8 @@ const Home = ({navigation}) => {
     const initialCurrentLocation = {
         streetName: "Dinajpur",
         gps: {
-            latitude: 25.636574,
-            longitude: 88.636322
+            latitude: 1.558050496260768,
+            longitude: 110.34743759630511,
         }
     }
 

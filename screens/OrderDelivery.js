@@ -1,28 +1,41 @@
-import React from 'react';
-import { 
+import React from "react";
+import {
     View,
     Text,
     Image,
     TouchableOpacity
+    
 } from "react-native";
-import { icons, COLORS, SIZES, FONTS } from '../constants';
 
-const OrderDelivery = () => {
-    function renderMap(){
-        return(
-            <View style={{ flex: 1}}>
-                <Text style={{ color: COLORS.primary, ...FONTS.h2 }}>
-                    Oder Place Successfully
-                </Text>
-                
+
+import { COLORS, FONTS, icons, SIZES} from "../constants"
+
+const OrderDelivery = ({ route, navigation }) => {
+    function renderButtons() {
+        return (
+            <View
+                style={{
+                    position: 'absolute',
+                    padding: SIZES.padding * 5,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+            >
+                <Text style={{
+                alignItems: 'center',
+                justifyContent: 'center',
+                 ...FONTS.h3
+                 }}>Order Place successfully</Text>
             </View>
+
         )
     }
 
-
     return (
-        <View style={{flex: 1}}>
-            {renderMap()}
+        <View style={{ flex: 1 }}>
+          
+            {renderButtons()}
+            
         </View>
     )
 }
