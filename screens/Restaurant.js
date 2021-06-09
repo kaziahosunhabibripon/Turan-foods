@@ -65,6 +65,17 @@ const Restaurant = ({ route, navigation }) => {
         }
         return 0
     }
+    function getBasketItemCount(){
+        const itemCount = orderItems.reduce((a , b) => a + (b.qty || 0), 0)
+
+        return itemCount
+    }
+
+    function sumOrder(){
+        const total = orderItems.reduce((a, b) => a + (b.total || 0), 0)
+
+        return total.toFixed(2)
+    }
     function renderHeader() {
         return (
             <View
@@ -321,8 +332,8 @@ const Restaurant = ({ route, navigation }) => {
                             borderBottomWidth: 1
                         }}
                     >
-                        <Text style={{ ...FONTS.h3 }}> items in Cart</Text>
-                        <Text style={{ ...FONTS.h3 }}>$45</Text>
+                        <Text style={{ ...FONTS.h3 }}>{getBasketItemCount()} items in Cart</Text>
+                        <Text style={{ ...FONTS.h3 }}>${sumOrder()}</Text>
                     </View>
                     <View
                         style={{
@@ -374,7 +385,7 @@ const Restaurant = ({ route, navigation }) => {
                                 borderRadius: SIZES.radius
                             }}
                             onPress={() => navigation.navigate("OrderDelivery", {
-                                restaurant: restaurant,
+                                restaurants : restaurants,
                                 currentLocation: currentLocation
                             })}
                         >

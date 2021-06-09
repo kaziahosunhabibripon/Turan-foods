@@ -20,12 +20,13 @@
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-maps": "0.28.0",
     "react-native-reanimated": "^2.2.0",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "^3.3.0",
+    "react-native-shared-element": "^0.7.0",
     "react-native-svg": "^12.1.1",
     "react-native-web": "~0.13.12",
-    "react-native-shared-element": "^0.7.0",
     "react-navigation-shared-element": "^5.0.0-alpha1"
   },
   "devDependencies": {
@@ -36,5 +37,13 @@
   "version": "1.0.0",
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaziahosunhabibripon/Turan-foods.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaziahosunhabibripon/Turan-foods/issues"
+  },
+  "homepage": "https://github.com/kaziahosunhabibripon/Turan-foods#readme"
 }
